@@ -20,7 +20,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, random_split
 
-from data_utils import build_tokenizer, build_embedding_matrix, Tokenizer4Bert, ABSADataset
+from data_utils_bert import build_tokenizer, build_embedding_matrix, Tokenizer4Bert, ABSADataset
 from models.svcclgcn import SVCCL
 
 
