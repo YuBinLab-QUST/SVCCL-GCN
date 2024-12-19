@@ -7,6 +7,8 @@
 * numpy 1.15.4
 
 ## Training
-* Train with command, optional arguments could be found in [train.py](/train.py) 
+* Train with command, optional arguments could be found in [train.py](/train.py) \& [train_bert.py](/train_bert.py)
 * Please tune the argument of *--seed* for better performance
 * Run svcclgcn: ```./run_svcclgcn.sh```
+* Run svcclgcn_bert: ```./run_svcclgcn_bert.sh```
+
