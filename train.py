@@ -23,7 +23,7 @@ class Instructor:
         self.train_data_loader = BucketIterator(data=absa_dataset.train_data, batch_size=opt.batch_size, shuffle=True)
         self.test_data_loader = BucketIterator(data=absa_dataset.test_data, batch_size=opt.batch_size, shuffle=False)
 
-        self.model = opt.model_class(absa_dataset.embedding_matrix,opt).to(opt.device)
+        self.model = opt.model_class(opt,absa_dataset.embedding_matrix).to(opt.device)
         self._print_args()
         self.global_f1 = 0.
 
