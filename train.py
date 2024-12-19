@@ -11,8 +11,8 @@ from bucket_iterator import BucketIterator
 from sklearn import metrics
 from data_utils import ABSADatesetReader
 
-from criterion_new import Conloss
-from models.svccl import SVGCN
+from model.CCL import Conloss
+from models.svcclgcn import SVGCN
 
 class Instructor:
     def __init__(self, opt):
