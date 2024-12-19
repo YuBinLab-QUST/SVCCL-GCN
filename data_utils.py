@@ -128,9 +128,6 @@ class ABSADataset(Dataset):
         fin = open(fname+'.graph', 'rb')
         idx2graph = pickle.load(fin)
         fin.close()
-        fin = open(fname+'.sentic', 'rb')
-        idx2graph_s = pickle.load(fin)
-        fin.close()
         fin = open(fname+'.graph_sdat', 'rb')
         idx2graph_sdat = pickle.load(fin)
         fin.close()
@@ -186,9 +183,6 @@ class ABSADataset(Dataset):
             dependency_graph = np.pad(idx2graph[graph_id], \
                 ((0,tokenizer.max_seq_len-idx2graph[graph_id].shape[0]),(0,tokenizer.max_seq_len-idx2graph[graph_id].shape[0])), 'constant')
 
-            sentic_graph = np.pad(idx2graph_s[graph_id], \
-                ((0,tokenizer.max_seq_len-idx2graph_s[graph_id].shape[0]),(0,tokenizer.max_seq_len-idx2graph_s[graph_id].shape[0])), 'constant')
-
             sdat_graph = np.pad(idx2graph_sdat[graph_id], \
                 ((0,tokenizer.max_seq_len-idx2graph_sdat[graph_id].shape[0]),(0,tokenizer.max_seq_len-idx2graph_sdat[graph_id].shape[0])), 'constant')
             if '15' in fname or '16' in fname :
@@ -222,7 +216,6 @@ class ABSADataset(Dataset):
                     'aspect_indices': aspect_indices,
                     'aspect_boundary': aspect_boundary,
                     'dependency_graph': dependency_graph,
-                    'sentic_graph': sentic_graph,
                     'sdat_graph': sdat_graph,
                     'attribute_graph': attribute_graph,
                     'polarity': polarity,
