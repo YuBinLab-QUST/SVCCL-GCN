@@ -1,4 +1,4 @@
-# SVCCL-GCN: An interpretable graph convolutional network for aspect-based sentiment analysis based on self-attention variational autoencoder and capsule contrastive learning
+# Graph convolutional network based on self-attention variational autoencoder and capsule contrastive learning for aspect-based sentiment analysis
 
 ## Requirements
 * Python 3.9
